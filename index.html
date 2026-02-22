@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aasrith Thirunahari | Student Developer Portfolio</title>
+    <meta name="description"
+        content="Portfolio of Aasrith Thirunahari — a passionate student developer crafting modern web experiences. Get in touch for collaborations and opportunities.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Cursor Glow -->
+    <div class="cursor-glow" id="cursorGlow"></div>
+
+    <!-- Particle Canvas -->
+    <canvas id="particleCanvas"></canvas>
+
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-content">
+            <div class="preloader-ring"></div>
+            <span class="preloader-text">Loading...</span>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <a href="#" class="nav-logo">
+            <span class="logo-bracket">&lt;</span>Aasrith<span class="logo-bracket">/&gt;</span>
+        </a>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#home" class="nav-link active" data-section="home">Home</a></li>
+            <li><a href="#about" class="nav-link" data-section="about">About</a></li>
+            <li><a href="#skills" class="nav-link" data-section="skills">Skills</a></li>
+            <li><a href="#projects" class="nav-link" data-section="projects">Projects</a></li>
+            <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
+        </ul>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-bg-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+        </div>
+        <div class="hero-content reveal">
+            <div class="hero-badge">
+                <span class="badge-dot"></span>
+                Available for Opportunities
+            </div>
+            <p class="hero-greeting">Hey there! I'm</p>
+            <h1 class="hero-title">
+                <span class="title-line">Aasrith</span>
+                <span class="title-line gradient-text">Thirunahari</span>
+            </h1>
+            <p class="hero-subtitle">
+                <span class="typewriter" id="typewriter"></span><span class="cursor-blink">|</span>
+            </p>
+            <p class="hero-desc">
+                A student developer passionate about building beautiful, functional websites and apps.
+                Currently exploring the MERN stack & modern web technologies.
+            </p>
+            <div class="hero-cta">
+                <a href="#projects" class="btn btn-primary">
+                    <span>View My Work</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+                <a href="#contact" class="btn btn-outline">
+                    <span>Get In Touch</span>
+                    <i class="fas fa-paper-plane"></i>
+                </a>
+            </div>
+            <div class="hero-social">
+                <a href="https://github.com/UgguMan" target="_blank" class="social-icon" title="GitHub"><i
+                        class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/aasrith-thirunahari-112689335" target="_blank" class="social-icon"
+                    title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://www.instagram.com/aasrith.07/" target="_blank" class="social-icon" title="Instagram"><i
+                        class="fab fa-instagram"></i></a>
+                <a href="mailto:aasrithgetjob@gmail.com" class="social-icon" title="Email"><i
+                        class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+        <a href="#about" class="scroll-indicator">
+            <span>Scroll</span>
+            <div class="scroll-arrow"></div>
+        </a>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section about">
+        <div class="container">
+            <h2 class="section-title reveal">
+                <span class="title-number">01.</span> About Me
+            </h2>
+            <div class="about-grid">
+                <div class="about-text reveal">
+                    <p>
+                        Hello! I'm <strong>Aasrith Thirunahari</strong>, a student developer who loves turning ideas
+                        into reality through code. My journey into web development started with simple HTML pages and
+                        has
+                        evolved into building full-stack applications.
+                    </p>
+                    <p>
+                        I'm currently diving deep into the <strong>MERN stack</strong> (MongoDB, Express, React,
+                        Node.js) and constantly exploring new technologies. I believe in writing clean, maintainable
+                        code
+                        and creating experiences that users love.
+                    </p>
+                    <p>
+                        When I'm not coding, you'll find me exploring new tech, contributing to open-source projects, or
+                        learning about design principles.
+                    </p>
+                    <div class="about-cta">
+                        <a href="#contact" class="btn btn-outline btn-sm">
+                            <i class="fas fa-comments"></i>
+                            <span>Let's Talk</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="about-stats reveal">
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fas fa-code"></i></div>
+                        <h3 class="stat-number" data-target="10">0</h3>
+                        <p class="stat-label">Projects Built</p>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fas fa-laptop-code"></i></div>
+                        <h3 class="stat-number" data-target="5">0</h3>
+                        <p class="stat-label">Technologies</p>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fas fa-coffee"></i></div>
+                        <h3 class="stat-number" data-target="500">0</h3>
+                        <p class="stat-label">Cups of Coffee</p>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fas fa-heart"></i></div>
+                        <h3 class="stat-number" data-target="100">0</h3>
+                        <p class="stat-label">% Dedication</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section skills">
+        <div class="container">
+            <h2 class="section-title reveal">
+                <span class="title-number">02.</span> Skills & Tech
+            </h2>
+            <div class="skills-grid reveal">
+                <div class="skill-card" data-tilt>
+                    <div class="skill-icon"><i class="fab fa-html5"></i></div>
+                    <h3>HTML5</h3>
+                    <div class="skill-bar">
+                        <div class="skill-fill" data-level="90"></div>
+                    </div>
+                </div>
+                <div class="skill-card" data-tilt>
+                    <div class="skill-icon"><i class="fab fa-css3-alt"></i></div>
+                    <h3>CSS3</h3>
+                    <div class="skill-bar">
+                        <div class="skill-fill" data-level="85"></div>
+                    </div>
+                </div>
+                <div class="skill-card" data-tilt>
+                    <div class="skill-icon"><i class="fab fa-js-square"></i></div>
+                    <h3>JavaScript</h3>
+                    <div class="skill-bar">
+                        <div class="skill-fill" data-level="75"></div>
+                    </div>
+                </div>
+                <div class="skill-card" data-tilt>
+                    <div class="skill-icon"><i class="fab fa-react"></i></div>
+                    <h3>React</h3>
+                    <div class="skill-bar">
+                        <div class="skill-fill" data-level="60"></div>
+                    </div>
+                </div>
+                <div class="skill-card" data-tilt>
+                    <div class="skill-icon"><i class="fab fa-node-js"></i></div>
+                    <h3>Node.js</h3>
+                    <div class="skill-bar">
+                        <div class="skill-fill" data-level="55"></div>
+                    </div>
+                </div>
+                <div class="skill-card" data-tilt>
+                    <div class="skill-icon"><i class="fab fa-git-alt"></i></div>
+                    <h3>Git</h3>
+                    <div class="skill-bar">
+                        <div class="skill-fill" data-level="70"></div>
+                    </div>
+                </div>
+                <div class="skill-card" data-tilt>
+                    <div class="skill-icon"><i class="fab fa-python"></i></div>
+                    <h3>Python</h3>
+                    <div class="skill-bar">
+                        <div class="skill-fill" data-level="65"></div>
+                    </div>
+                </div>
+                <div class="skill-card" data-tilt>
+                    <div class="skill-icon"><i class="fas fa-database"></i></div>
+                    <h3>MongoDB</h3>
+                    <div class="skill-bar">
+                        <div class="skill-fill" data-level="50"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section projects">
+        <div class="container">
+            <h2 class="section-title reveal">
+                <span class="title-number">03.</span> My Projects
+            </h2>
+            <div class="projects-grid">
+                <div class="project-card reveal" data-tilt>
+                    <div class="project-image">
+                        <div class="project-placeholder"><i class="fas fa-water"></i></div>
+                        <div class="project-overlay">
+                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                            <a href="https://github.com/UgguMan" class="project-link"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Water Quality Monitoring System</h3>
+                        <p>Developed an IoT-based system using Arduino Uno and a turbidity sensor to monitor water
+                            quality in real time. Implemented embedded logic in Embedded C and interfaced sensors for
+                            accurate data acquisition.</p>
+                        <div class="project-tags">
+                            <span>IoT</span><span>Arduino</span><span>Embedded C</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card reveal" data-tilt>
+                    <div class="project-image">
+                        <div class="project-placeholder"><i class="fas fa-paint-brush"></i></div>
+                        <div class="project-overlay">
+                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                            <a href="https://github.com/UgguMan" class="project-link"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Landing Page Design</h3>
+                        <p>A modern landing page with glassmorphism effects, smooth animations, and pixel-perfect UI.
+                        </p>
+                        <div class="project-tags">
+                            <span>HTML</span><span>CSS</span><span>Design</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card reveal" data-tilt>
+                    <div class="project-image">
+                        <div class="project-placeholder"><i class="fas fa-birthday-cake"></i></div>
+                        <div class="project-overlay">
+                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                            <a href="https://github.com/UgguMan" class="project-link"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Birthday Surprise</h3>
+                        <p>An interactive birthday surprise web page with confetti, animations, and special effects.</p>
+                        <div class="project-tags">
+                            <span>HTML</span><span>CSS</span><span>JS</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card reveal" data-tilt>
+                    <div class="project-image">
+                        <div class="project-placeholder"><i class="fas fa-user-lock"></i></div>
+                        <div class="project-overlay">
+                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                            <a href="https://github.com/UgguMan" class="project-link"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Login & Signup Page</h3>
+                        <p>A sleek authentication interface with form switching animation and validation.</p>
+                        <div class="project-tags">
+                            <span>HTML</span><span>CSS</span><span>JS</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact">
+        <div class="container">
+            <h2 class="section-title reveal">
+                <span class="title-number">04.</span> Get In Touch
+            </h2>
+            <p class="contact-desc reveal">
+                I'm always open to new opportunities, collaborations, or just a friendly chat.
+                Drop me a message and I'll get back to you as soon as possible!
+            </p>
+            <div class="contact-grid">
+                <!-- Working Contact Form via Web3Forms -->
+                <form class="contact-form reveal" id="contactForm" action="https://api.web3forms.com/submit"
+                    method="POST">
+                    <!-- Web3Forms Access Key - replace with your own from https://web3forms.com -->
+                    <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+                    <input type="hidden" name="subject" value="New Portfolio Contact from Website">
+                    <input type="hidden" name="from_name" value="Portfolio Contact Form">
+                    <!-- Honeypot for spam protection -->
+                    <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" required autocomplete="off">
+                            <label for="name">Your Name</label>
+                            <span class="form-line"></span>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" required autocomplete="off">
+                            <label for="email">Your Email</label>
+                            <span class="form-line"></span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="subject" name="form_subject" autocomplete="off">
+                        <label for="subject">Subject (optional)</label>
+                        <span class="form-line"></span>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                        <label for="message">Your Message</label>
+                        <span class="form-line"></span>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-submit" id="submitBtn">
+                        <span class="btn-text">Send Message</span>
+                        <span class="btn-loading" style="display:none;">
+                            <i class="fas fa-circle-notch fa-spin"></i> Sending...
+                        </span>
+                        <i class="fas fa-paper-plane btn-icon"></i>
+                    </button>
+                </form>
+
+                <div class="contact-sidebar reveal">
+                    <div class="contact-info">
+                        <div class="info-card" id="emailCard">
+                            <div class="info-icon"><i class="fas fa-envelope"></i></div>
+                            <div>
+                                <h4>Email</h4>
+                                <p>aasrithgetjob@gmail.com</p>
+                            </div>
+                            <button class="copy-btn" data-copy="aasrithgetjob@gmail.com" title="Copy email">
+                                <i class="fas fa-copy"></i>
+                            </button>
+                        </div>
+                        <div class="info-card">
+                            <div class="info-icon"><i class="fas fa-map-marker-alt"></i></div>
+                            <div>
+                                <h4>Location</h4>
+                                <p>Hyderabad, India</p>
+                            </div>
+                        </div>
+                        <div class="info-card">
+                            <div class="info-icon"><i class="fas fa-graduation-cap"></i></div>
+                            <div>
+                                <h4>Status</h4>
+                                <p>Student & Learning</p>
+                            </div>
+                        </div>
+                        <div class="info-card">
+                            <div class="info-icon"><i class="fas fa-clock"></i></div>
+                            <div>
+                                <h4>Response Time</h4>
+                                <p>Within 24 hours</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="connect-socials">
+                        <h4>Connect with me</h4>
+                        <div class="social-links-row">
+                            <a href="https://github.com/UgguMan" target="_blank" class="social-card" title="GitHub">
+                                <i class="fab fa-github"></i>
+                                <span>GitHub</span>
+                            </a>
+                            <a href="https://www.linkedin.com/in/aasrith-thirunahari-112689335" target="_blank"
+                                class="social-card" title="LinkedIn">
+                                <i class="fab fa-linkedin-in"></i>
+                                <span>LinkedIn</span>
+                            </a>
+                            <a href="https://www.instagram.com/aasrith.07/" target="_blank" class="social-card"
+                                title="Instagram">
+                                <i class="fab fa-instagram"></i>
+                                <span>Instagram</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-top">
+                <a href="#" class="footer-logo">
+                    <span class="logo-bracket">&lt;</span>Aasrith<span class="logo-bracket">/&gt;</span>
+                </a>
+                <div class="footer-nav">
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </div>
+            <div class="footer-divider"></div>
+            <div class="footer-bottom">
+                <p class="footer-text">
+                    Designed & Built with <span class="heart-pulse">❤️</span> by <span class="gradient-text">Aasrith
+                        Thirunahari</span>
+                </p>
+                <p class="footer-copy">&copy; 2026 All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Success Modal -->
+    <div class="modal-overlay" id="successModal">
+        <div class="modal-content">
+            <div class="modal-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h3>Message Sent!</h3>
+            <p>Thanks for reaching out! I'll get back to you within 24 hours. 🚀</p>
+            <button class="btn btn-primary" id="modalClose">
+                <span>Got it!</span>
+            </button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
